@@ -44,10 +44,6 @@ let e2 = 3;
 f2 = 0;
 document.querySelector(`.out-5`).textContent = e2 / f2;
 
-/*
-В математике деление на ноль являеться некорректной операцией, а в JS даёт бесконечность.
-*/
-
 // document.querySelector('.out-5').textContent = 
 
 // Task 6.
@@ -70,11 +66,10 @@ document.querySelector(`.out-7`).textContent = e4 * f4;
 
 // Task 8.
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит в консоль то, что пользователь ввел в input.
-
-let inp1 = document.querySelector(`.i-8`);
+let inp8 = document.querySelector(`.i-8`);
 
 function t8() {
-    console.log(inp1.value);
+    console.log(inp8.value);
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -82,33 +77,38 @@ document.querySelector('.b-8').onclick = t8;
 // Task 9.
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу,  что пользователь ввел в input. Добавьте очистку input после нажатия кнопки.
 
-
-let inp2 = document.querySelector(`.i-9`);
-//let button = document.querySelector(`button-primary b-9`);
+let inp9 = document.querySelector(`.i-9`);
 
 function t9() {
-    console.log(inp2.value);
-    inp2.value = ``;
+    document.querySelector(`.out-9`).textContent = inp9.value;
+    inp9.value = ``;
 }
 
 document.querySelector('.b-9').onclick = t9;
 
 // Task 10.
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу число, которое ввел пользователь умноженное на 10.
-let inp3 = document.querySelector(`.i-10`);
+
+let inp10 = document.querySelector(`.i-10`);
 
 function t10() {
-    let num = +inp3.value;
-    console.log(num * 10);
+    document.querySelector(`.out-10`).textContent = inp10.value * 10;
+    inp10.value = ``;
 }
 
 document.querySelector('.b-10').onclick = t10;
 
+/* Хотя в задании не была указана очистка поля, но добавил.
+Так красивше)*/
+
 // Task 11.
 // Создайте input и кнопку. По нажатию на кнопку выполняется функция, которая выводит на страницу в .out-11 число, которое ввел пользователь и к нему добавленное число 10.
 
-function t11() {
+let inp11 = document.querySelector(`.i-11`);
 
+function t11() {
+    document.querySelector(`.out-11`).textContent = +inp11.value + 10;
+    inp11.value = ``;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -116,8 +116,13 @@ document.querySelector('.b-11').onclick = t11;
 // Task 12.
 // Создайте два input (i-12_1 и i-12-2) и кнопку. В первый input пользователь вводит имя, во второе фамилию. При нажатии кнопки выполняется функция, которая выводит в .out-12 строку 'Hello имя фамилия', где имя - имя пользователя и фамилия - введенная фамилия.
 
-function t12() {
+let inp121 = document.querySelector(`.i-12_1`);
+inp122 = document.querySelector(`.i-12_2`);
 
+function t12() {
+    document.querySelector(`.out-12`).textContent = `Hello ` + inp121.value + ` ` + inp122.value;
+    inp121.value = ``;
+    inp122.value = ``;
 }
 
 document.querySelector('.b-12').onclick = t12;
@@ -125,14 +130,21 @@ document.querySelector('.b-12').onclick = t12;
 // Task 13.
 // Создайте два input и кнопку. В input пользователь вводит числа. При нажатии кнопки выполняется функция, которая выводит сумму данных двух чисел на страницу в .out-13.
 
-function t13() {
+let inp131 = document.querySelector(`.i-13_1`);
+inp132 = document.querySelector(`.i-13_2`);
 
+function t13() {
+    document.querySelector(`.out-13`).textContent = +inp131.value + (+inp132.value);
+    inp131.value = ``;
+    inp132.value = ``;
 }
 
 document.querySelector('.b-13').onclick = t13;
 
 // Task 14.
 // Создайте input .i-14 и пропишите ему в html value = 77. С помощью JS измените value на 'Hello'.
+
+div.
 
 // document.querySelector('.i-14').value = 
 
