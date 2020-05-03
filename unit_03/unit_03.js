@@ -1,17 +1,15 @@
-// Task 1
+//Task 1 
 /*
 При нажатии кнопки b-1 срабатывает функция f1. Функция должна прочитать содержимое i-1 и сравнить его с числом 4 (сравнение ==). 
 Результат сравнения - true или false выведите в out-1.
 */
 
-let inp1 = document.querySelector(`.i-1`).value;
-
 function f1() {
-    console.log(inp1);
+    let inp1 = document.querySelector('.i-1').value;
     if (inp1 == 4) {
-        document.querySelector(`.out-1`).textContent = true;
+        document.querySelector('.out-1').textContent = true;
     } else {
-        document.querySelector(`.out-1`).textContent = false;
+        document.querySelector('.out-1').textContent = false;
     }
 }
 
@@ -29,9 +27,9 @@ let a22 = 32;
 
 function f2() {
     if (a21 > a22) {
-        document.querySelector(`.out-2`).textContent = a21;
+        document.querySelector('.out-2').textContent = a21;
     } else {
-        document.querySelector(`.out-2`).textContent = a22;
+        document.querySelector('.out-2').textContent = a22;
     }
 }
 
@@ -40,33 +38,46 @@ document.querySelector('.b-2').onclick = f2;
 
 // Task 3
 /*
-Даны 2 input - i-31 и i-32, оба - input[type=number]. При нажатии кнопки b-3 срабатывает функция f3. Функция должна вычитать 
-содержимое i-31 и i-32 в переменные и сравнить их, вывести в  out-3 большее число.
+ Даны 2 input - i-31 и i-32, оба - input[type=number]. При нажатии кнопки b-3 срабатывает функция f3. 
+ Функция должна вычитать содержимое i-31 и i-32 в переменные и сравнить их, вывести в  out-3 большее число.
+ Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9 и 22, 5 и 111.
 */
-//     Проведите самостоятельный тест работы, введите пары чисел 4 и 9, 9 и 22, 5 и 111.
 
 function f3() {
-    let inp31 = document.querySelector(`.i-31`).value;
-    inp32 = document.querySelector(`.i-32`).value;
+    let inp31 = document.querySelector('.i-31').value;
+    let inp32 = document.querySelector('.i-32').value;
     if (inp31 > inp32) {
-        document.querySelector(`.out-3`).textContent = inp31;
+        document.querySelector('.out-3').textContent = inp31;
     } else {
-        document.querySelector(`.out-3`).textContent = inp32;
+        document.querySelector('.out-3').textContent = inp32;
     }
 }
 
 document.querySelector('.b-3').onclick = f3;
 
 
-// Task 4. Создайте на странице input[type=number] с классом i-4, куда пользователь может ввести год своего рождения. Есть кнопка b-4 которая запускает функцию f4. Функция должна вывести в  .out-4 число 1 если пользователю больше или равно 18 лет, и 0 если меньше.
+// Task 4
+/*
+Создайте на странице input[type=number] с классом i-4, куда пользователь может ввести год своего рождения. 
+Есть кнопка b-4 которая запускает функцию f4. Функция должна вывести в  .out-4 число 1 если пользователю больше или равно 18 лет, и 0 если меньше.
+*/
 
 function f4() {
-
+    let age=document.querySelector('.i-4').value;
+    if ((2020-age)>=18){
+        document.querySelector('.out-4').textContent=1;
+    } else{
+        document.querySelector('.out-4').textContent=0;
+    }
 }
 
 document.querySelector('.b-4').onclick = f4;
 
-// Task 5. Создайте на странице input[type=number] с классом i-5, куда пользователь может ввести число. Есть кнопка b-5 которая запускает функцию f5. Функция должна вывести в  .out-5 символ m если число меньше нуля, 0 если число равно нулю и 1 если больше.
+// Task 5. 
+/*
+ Создайте на странице input[type=number] с классом i-5, куда пользователь может ввести число. Есть кнопка b-5 которая запускает функцию f5.
+ Функция должна вывести в  .out-5 символ m если число меньше нуля, 0 если число равно нулю и 1 если больше.
+*/
 
 function f5() {
 
