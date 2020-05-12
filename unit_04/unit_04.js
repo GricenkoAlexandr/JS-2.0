@@ -89,6 +89,7 @@ document.querySelector(".b-7").onclick = f7;
 function f8() {
   document.querySelector(".out-8").innerHTML =
     "<input type='text' class='i-81'>, <button class='button-primary b-81'>Task-81 </button>, <div class='out-81'></div>";
+
   function f81() {
     let sout = document.querySelector(".i-81").value;
     document.querySelector(".out-81").textContent = sout;
@@ -127,7 +128,7 @@ document.querySelector(".b-9").onclick = f9;
 
 function f10() {
   let col10 = document.querySelector(".i-10").value;
-  document.querySelector(".out-10").style.color = col10;
+  document.querySelector(".out-10").style.backgroundColor = col10;
 }
 
 document.querySelector(".b-10").onclick = f10;
