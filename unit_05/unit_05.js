@@ -66,7 +66,11 @@ document.querySelector(".b-4").onclick = t4;
 function t5() {
   let out5 = "";
   for (let i = 1; i <= 17; i++) {
-    out5 += i + "";
+    if (i % 2 == 0) {
+      out5 += i + "_**";
+    } else {
+      out5 += i + "_*";
+    }
     document.querySelector(".out-5").innerHTML = out5;
   }
 }
@@ -81,7 +85,14 @@ document.querySelector(".b-5").onclick = t5;
 // Задача решается с помощью цикла. В каждой итерации цикл выводит 6 звездочек без пробелов и символ переноса строки br.
 // Количество строк (итераций, повторений) цикла вводит пользователь в i-6.
 
-function t6() {}
+function t6() {
+  let inp6 = document.querySelector(".i-6").value;
+  let out6 = "";
+  for (let i = 1; i <= inp6; i = i + 1) {
+    out6 += "******" + "<br>";
+    document.querySelector(".out-6").innerHTML = out6;
+  }
+}
 
 document.querySelector(".b-6").onclick = t6;
 
@@ -92,7 +103,14 @@ document.querySelector(".b-6").onclick = t6;
 //     4 3 2 1
 // Задача решается с помощью цикла.
 
-function t7() {}
+function t7() {
+  let inp7 = document.querySelector(".i-7").value;
+  let out7 = "";
+  for (let i = inp7; i >= 0; i--) {
+    out7 += i + " ";
+    document.querySelector(".out-7").textContent = out7;
+  }
+}
 
 document.querySelector(".b-7").onclick = t7;
 
@@ -104,7 +122,15 @@ document.querySelector(".b-7").onclick = t7;
 //     4 5 6 7 8
 // Задача решается с помощью цикла.
 
-function t8() {}
+function t8() {
+  let inp81 = document.querySelector(".i-81").value;
+  let inp82 = document.querySelector(".i-82").value;
+  let out8 = "";
+  for (let i = inp81; i <= inp82; i++) {
+    out8 += i + " ";
+    document.querySelector(".out-8").textContent = out8;
+  }
+}
 
 document.querySelector(".b-8").onclick = t8;
 
@@ -118,15 +144,35 @@ document.querySelector(".b-8").onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл.
 // цикл - один
 
-function t9() {}
-
+function t9() {
+  let inp91 = document.querySelector(".i-91").value;
+  let inp92 = document.querySelector(".i-92").value;
+  let out9 = "";
+  if (inp91 < inp92) {
+    for (let i = inp91; i <= inp92; i++) {
+      out9 += i + " ";
+      document.querySelector(".out-9").textContent = out9;
+    }
+  } else {
+    for (let i = inp92; i <= inp91; i++) {
+      out9 += i + " ";
+      document.querySelector(".out-9").textContent = out9;
+    }
+  }
+}
 document.querySelector(".b-9").onclick = t9;
 
 //  Task 10
 // Кнопка b-10 запускает функцию t10. Функция должна выводить в out-10 четные годы от 1950 до 2000 включительно.
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
-function t10() {}
+function t10() {
+  let out10 = "";
+  for (let i = 1950; i <= 2000; i = i + 2) {
+    out10 += i + " ";
+    document.querySelector(".out-10").textContent = out10;
+  }
+}
 
 document.querySelector(".b-10").onclick = t10;
 
@@ -138,7 +184,14 @@ document.querySelector(".b-10").onclick = t10;
 //     В результате должно получиться так:
 //     one 3 4 two
 
-function t11() {}
+function t11() {
+  let div11 = document.querySelectorAll("div.div-11");
+  let out11 = "";
+  for (let i = 0; i < div11.length; i = i + 1) {
+    out11 += div11[i].innerHTML + " ";
+    document.querySelector(".out-11").textContent = out11;
+  }
+}
 
 document.querySelector(".b-11").onclick = t11;
 
@@ -148,7 +201,12 @@ document.querySelector(".b-11").onclick = t11;
 // перебрать их с помощью цикла. Обращение к div выглядит так elem[i]
 // применить к каждому elem[i].style.background = ‘orange’
 
-function t12() {}
+function t12() {
+  let div12 = document.querySelectorAll("div.div-12");
+  for (let i = 0; i < div12.length; i = i + 1) {
+    div12[i].style.background = "orange";
+  }
+}
 
 document.querySelector(".b-12").onclick = t12;
 
@@ -158,7 +216,12 @@ document.querySelector(".b-12").onclick = t12;
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // применить к каждому elem[i].value, причем к value первого должно равняться 1, второго - 2, третьего - 3...
 
-function t13() {}
+function t13() {
+  let inp13 = document.querySelectorAll("input.i-13");
+  for (let i = 0; i < inp13.length; i = i + 1) {
+    inp13[i].value = i + 1;
+  }
+}
 
 document.querySelector(".b-13").onclick = t13;
 
@@ -168,7 +231,14 @@ document.querySelector(".b-13").onclick = t13;
 // перебрать их с помощью цикла. Обращение к элементу выглядит так elem[i]
 // вывести в out-14 value выбранного. Проверить выбран ли элемент можно с помощью elem[i].checked.
 
-function t14() {}
+function t14() {
+  let inp14 = document.querySelectorAll("input.i-14");
+  for (let i = 0; i < inp14.length; i = i + 1) {
+    if (inp14[i].checked) {
+      document.querySelector(".out-14").textContent = inp14[i].value;
+    }
+  }
+}
 
 document.querySelector(".b-14").onclick = t14;
 
@@ -178,6 +248,12 @@ document.querySelector(".b-14").onclick = t14;
 // Для вывода использовать цикл. Разделитель пробел.
 // Подсказка (10 - i) + ' ' + i
 
-function t15() {}
+function t15() {
+  let out15 = "";
+  for (let i = 0; i <= 10; i++) {
+    out15 += 10 - i + " " + i + " ";
+  }
+  document.querySelector(".out-15").textContent = out15;
+}
 
 document.querySelector(".b-15").onclick = t15;
