@@ -11,11 +11,10 @@ function t1() {
     for (let k = 0; k < 3; k++) {
       out1 += "*";
     }
-    out1 += "-";
+    out1 += "_";
   }
   document.querySelector(".out-1").innerHTML = out1;
 }
-
 document.querySelector(".b-1").onclick = t1;
 
 //  Task 2
